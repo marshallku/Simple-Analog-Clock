@@ -6,7 +6,7 @@ function myClock() {
     const secondHand = document.createElement("div");
     const dayNDate = document.createElement("div");
     const space = document.createTextNode("\u00A0\u00A0");
-    
+
     const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
     let hours = 0;
@@ -17,7 +17,7 @@ function myClock() {
 
     const dayText = document.createTextNode(days[day]);
     const dateText = document.createTextNode(date);
-    
+
     const updateClock = () => {
         now = new Date();
         updateSecondHand();
@@ -32,31 +32,33 @@ function myClock() {
         const currentHour = now.getHours();
         const hour12 = currentHour > 12 ? currentHour - 12 : currentHour;
 
-        hours = hour12 + (minutes / 60);
+        hours = hour12 + minutes / 60;
 
-        hourHand.style.transform = `rotate3d(0, 0, 1, ${hours / 12 * 360}deg)`;
+        hourHand.style.transform = `rotate3d(0, 0, 1, ${
+            (hours / 12) * 360
+        }deg)`;
     };
     const updateMinuteHand = () => {
-        minutes = now.getMinutes() + (seconds / 60);
+        minutes = now.getMinutes() + seconds / 60;
 
-        minuteHand.style.transform = `rotate3d(0, 0, 1, ${minutes / 60 * 360}deg)`;
+        minuteHand.style.transform = `rotate3d(0, 0, 1, ${
+            (minutes / 60) * 360
+        }deg)`;
     };
     const updateSecondHand = () => {
-        seconds = now.getSeconds() + (now.getMilliseconds() / 1000);
+        seconds = now.getSeconds() + now.getMilliseconds() / 1000;
 
-        secondHand.style.transform = `rotate3d(0, 0, 1, ${seconds / 60 * 360}deg)`;
+        secondHand.style.transform = `rotate3d(0, 0, 1, ${
+            (seconds / 60) * 360
+        }deg)`;
     };
     const updateDay = () => {
-        day !== now.getDay() && (
-            day = now.getDay(),
-            dayText.nodeValue = days[day]
-        )
+        day !== now.getDay() &&
+            ((day = now.getDay()), (dayText.nodeValue = days[day]));
     };
     const updateDate = () => {
-        date !== now.getDate() && (
-            date = now.getDate(),
-            dateText.nodeValue = date
-        )
+        date !== now.getDate() &&
+            ((date = now.getDate()), (dateText.nodeValue = date));
     };
 
     updateClock();

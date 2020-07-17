@@ -9,7 +9,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
     height: 60vw;
     border-radius: 50%;
     background: #fdfdfd;
-    border: 5px solid #c3c3c3
+    border: 5px solid #c3c3c3;
 }
 
 #dot {
@@ -88,11 +88,11 @@ body {
     #hourHand {
         height: 15vh;
     }
-    
+
     #minuteHand {
         height: 25vh;
     }
-    
+
     #secondHand {
         height: 29vh;
     }
@@ -105,7 +105,7 @@ body {
 
     #clock {
         background: #2f2f2f;
-        border-color: #737373
+        border-color: #737373;
     }
 
     .hands.thick {
