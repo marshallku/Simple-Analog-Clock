@@ -7,7 +7,7 @@ function myClock() {
     const dayNDate = document.createElement("div");
     const space = document.createTextNode("\u00A0\u00A0");
 
-    const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     let hours = 0;
     let minutes = 0;

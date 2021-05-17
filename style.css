@@ -9,7 +9,7 @@
 html,
 body {
     height: 100%;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Varela Round", sans-serif;
 }
 
 body {
@@ -51,7 +51,8 @@ body {
 }
 
 .hands.thick {
-    background: #e1e1e1;
+    background: #757575;
+    opacity: 0.5;
 }
 
 #hourHand {
@@ -73,7 +74,7 @@ body {
     position: absolute;
     top: 25%;
     left: calc(50% - 35px);
-    width: 70px;
+    width: 85px;
     padding: 5px 0;
     font-weight: bold;
     font-size: 16px;
